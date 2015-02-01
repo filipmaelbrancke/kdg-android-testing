@@ -1,6 +1,6 @@
 package be.appfoundry.android.testing.espresso;
 
-import com.google.android.apps.common.testing.ui.espresso.ViewAction;
+import android.support.test.espresso.ViewAction;
 
 /**
  * Your own custom View Actions.

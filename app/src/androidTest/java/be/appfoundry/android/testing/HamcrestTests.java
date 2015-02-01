@@ -1,11 +1,11 @@
 package be.appfoundry.android.testing;
 
+import android.support.test.espresso.matcher.ViewMatchers;
 import be.appfoundry.android.testing.hamcrest.IsNotANumber;
-import com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers;
 import junit.framework.TestCase;
 import org.hamcrest.CoreMatchers;
 
-import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.assertThat;
+import static android.support.test.espresso.matcher.ViewMatchers.assertThat;
 
 /**
  * @author Filip Maelbrancke

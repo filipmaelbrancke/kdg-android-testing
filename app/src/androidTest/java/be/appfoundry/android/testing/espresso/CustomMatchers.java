@@ -1,10 +1,9 @@
 package be.appfoundry.android.testing.espresso;
 
+import android.support.test.espresso.matcher.BoundedMatcher;
 import android.view.View;
 import android.webkit.WebView;
 import be.appfoundry.android.testing.model.Person;
-import com.google.android.apps.common.testing.ui.espresso.matcher.BoundedMatcher;
-import org.hamcrest.CoreMatchers;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
@@ -28,6 +27,8 @@ public class CustomMatchers {
             public void describeTo(Description description) {
                 description.appendText("with fullname: ");
             }
+
+
         };
     }
 
@@ -69,7 +70,7 @@ public class CustomMatchers {
 
             @Override
             public void describeTo(Description description) {
-                description.appendText("webview's url does not match");
+                description.appendText("webview's url");
             }
         };
     }

@@ -1,13 +1,13 @@
 package be.appfoundry.android.testing.espresso;
 
+import android.support.test.espresso.UiController;
+import android.support.test.espresso.ViewAction;
 import android.view.View;
 import android.widget.EditText;
-import com.google.android.apps.common.testing.ui.espresso.UiController;
-import com.google.android.apps.common.testing.ui.espresso.ViewAction;
 import org.hamcrest.Matcher;
 
-import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.isAssignableFrom;
-import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.isAssignableFrom;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static org.hamcrest.CoreMatchers.allOf;
 
 /**

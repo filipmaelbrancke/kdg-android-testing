@@ -1,19 +1,19 @@
 package be.appfoundry.android.testing;
 
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.test.ActivityInstrumentationTestCase2;
 import be.appfoundry.android.testing.model.Person;
 import be.appfoundry.android.testing.ui.activity.PersonListActivity;
-import com.google.android.apps.common.testing.ui.espresso.assertion.ViewAssertions;
 
+import static android.support.test.espresso.Espresso.onData;
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static be.appfoundry.android.testing.espresso.CustomMatchers.loadsUrl;
 import static be.appfoundry.android.testing.espresso.CustomMatchers.withPerson;
 import static be.appfoundry.android.testing.espresso.CustomMatchers.withResourceName;
-import static com.google.android.apps.common.testing.ui.espresso.Espresso.onData;
-import static com.google.android.apps.common.testing.ui.espresso.Espresso.onView;
-import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.click;
-import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.isDescendantOfA;
-import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withId;
-import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasToString;
@@ -56,9 +56,11 @@ public class PersonListEspressoTest extends ActivityInstrumentationTestCase2<Per
     public void testClickOnPennyShouldShowPennyDetail() {
         onData(hasToString(containsString("Penny"))).perform(click());
 
-        onView(allOf(isDescendantOfA(withResourceName("android:id/action_bar_container")), withText("Person Detail")));
+        onView(
+            allOf(ViewMatchers.isDescendantOfA(withResourceName("android:id/action_bar_container")),
+                ViewMatchers.withText("Person Detail")));
 
-        onView(withId(R.id.profession)).check(ViewAssertions.matches(withText("Waitress")));
+        onView(withId(R.id.profession)).check(matches(withText("Waitress")));
     }
 
     public void testClickAmyPictureShouldOpenWikipedia() {
@@ -69,7 +71,7 @@ public class PersonListEspressoTest extends ActivityInstrumentationTestCase2<Per
 
         // check if the wikipedia page is being loaded in the webview
         onView(withId(R.id.wikipedia_webview))
-            .check(ViewAssertions.matches(loadsUrl("https://en.wikipedia.org/wiki/Mayim_Bialik")));
+            .check(matches(loadsUrl("https://en.wikipedia.org/wiki/Mayim_Bialik")));
     }
 
 
