@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">android testing</string>
+
+    <!--<string name="app_name">BigBang</string>-->
+    <string name="title_person_detail">Person Detail</string>
+    <string name="person_name">Sheldon Cooper</string>
+    <string name="person_profession_label">Profession:</string>
+    <string name="person_profession">theoretical physicist</string>
+    <string name="person_realname_label">Real name:</string>
+    <string name="person_realname">Jim Parsons</string>
+    <string name="person_mugshot_label">person mugshot</string>
+    <string name="list_item_name">firstname lastname</string>
+    <string name="list_item_mugshot_label">person mugshot</string>
+    <string name="no_persons">no persons found</string>
+    <string name="wikipedia">Wikipedia</string>
+
+</resources>
