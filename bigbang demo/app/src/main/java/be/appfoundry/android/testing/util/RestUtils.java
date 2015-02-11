@@ -1,6 +1,5 @@
 package be.appfoundry.android.testing.util;
 
-import android.util.Log;
 import com.google.gson.stream.JsonReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

@@ -9,8 +9,8 @@ import be.appfoundry.android.testing.ui.activity.WikipediaActivity;
  */
 public class AppUtils {
 
-    public static final String URL = "http://10.0.3.2:8080/";
-    //public static final String URL = "https://appfoundry-restdemo.herokuapp.com/";
+    //public static final String URL = "http://10.0.3.2:8080/";
+    public static final String URL = "https://appfoundry-restdemo.herokuapp.com/";
 
     public static void launchWikipedia(final Context context, final String url, final String title) {
         final Intent intent = new Intent(context, WikipediaActivity.class);
